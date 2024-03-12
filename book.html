@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Here</title>
+</head>
+<style>
+body{
+            
+    background-image: url(t2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    
+}
+label{
+    text-align: left;
+}
+input[type=submit]{
+    background-color: rgb(203, 194, 204) ;
+}
+input[type=reset]{
+    background-color: lavender;
+    
+}
+
+form {
+   
+    align-self:center;
+    background-image: url(h5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: auto
+}
+
+</style>
+<body>
+    
+    <form action= "#" name="Regform" method="post" onsubmit="checkEmail(),check_Cbox(),checkdays()">
+        <div>
+        <h1 align="center"><em>Hotel Guest Registration Form</em></h1>
+        
+        <label for="Name"> Full Name:</label>
+        <input type="text" placeholder="Enter ur name" name="Name" id="name"><br><br>
+        <label for="Email">Email</label>
+        <input type="text" name="Email" id="Email"> <br><br>
+        <label for="Gender">Gender:</label>
+        <select name="Gender" id="Gender">
+            <option value="---Select----">---Select----</option>
+            <option value="Male">male</option>
+            <option value="Female">Female</option>
+            <option value="Others">others</option></select><br><br>
+           
+        <label for="mobileno">Mobile no:</label>
+        <input type="tel" name="mobileno" id="mobileno" value="+91"><br><br>
+        <label for="address">Address:</label>
+        <input type="text" name="address" id="address"><br><br>
+        <label for="State:">State:</label>
+        <input type="text" name="state" id="state"><br><br>
+        <label for="city:">City:</label>
+        <input type="text" name="city" id="city"><br><br>
+
+        <label for="Check-in date">Check-in date</label>
+        <input type="date" name="Check-in-date" id="Check-in-date" required><br><br>
+        <label for= "Check-out date" >Check-out date</label>
+        <input type="date" name="Check-out-date" id="Check-out-date" required> <br> <br> 
+        <label for="No.Of.Adults">No.Of.Adults</label>
+        <input type="text" name="No.Of.Adults" id="No.Of.Adults"> <br> <br>
+        <label for="No.Of.children">No.Of.Children(if any)</label>
+        <input type="text" name="No.Of.Children" id="No.Of.Children"> <br><br>
+
+        <label for="Select Room Type">Select Room Type</label>   
+        <select name="select room type" id="select room type">
+            <option value="---Select----">---Select----</option>
+            <option value="Single Room">Single Room</option>
+            <option value="Double Room">Double Room</option>
+            <option value="Twin Room">Twin Room</option>
+            <option value="Connecting Room">Connecting Room</option>
+            <option value="Art-themed Room">Art-themed Room</option>
+
+        </select> <br><br>
+
+        <label for="Airport Shuttle Bus">Airport Shuttle Bus:</label>
+        <input type="radio" value="Yes">Yes 
+        <input type="radio" value="No">No <br> <br>
+
+        <label for="Any Special Requests or Preferences ">Any Special Requests or Preferences </label>
+        <select name="Any Special Requests or Preferences " id="Any Special Requests or Preferences ">
+            <option value="---Select----">---Select----</option>
+            <option value="bed preference">bed preference</option>
+            <option value="Room Location">Room Location</option>
+        </select><br><br>
+
+        <label for="Travel Packages"> Interested in any Travel Packages</label>
+        <input type="radio" value="Yes">Yes
+        <input type="radio" value="No">No <br><br>
+        
+
+    <input type="checkbox" name="t&c" value="t&c">agree to the terms and conditions of the hotel. <br><br>
+        
+
+ 
+
+        <input type="reset" value="reset">
+        <input type="submit" value="Submit"> <br><br>
+        <a href="travel_form.html">Click here for Holiday Planner Form</a>
+</div>
+    </form> 
+    <script>
+        function checkEmail(){
+         c_email=document.forms.Regform.Email.value;
+        if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(c_email)){
+            alert("Valid Email id")
+        }
+        else {
+            alert("Enter a valid email id")
+
+        }
+    }
+
+    
+       function check_Cbox() {
+        let c_Cbox = document.forms.Regform['t&c'];
+
+         if (!c_Cbox.checked) {
+            alert("Please accept the terms and conditions.");
+    }
+}
+
+    
+
+
+        
+    </script>
+    
+    
+</body>
+</html>
